@@ -41,10 +41,10 @@ const Services = () => {
       
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-slide-up">
-          <h2 className="font-montserrat text-4xl sm:text-5xl font-bold text-foreground mb-4">
+          <h2 className="font-montserrat text-4xl sm:text-5xl font-bold text-foreground mb-4 drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)]">
             Nuestros Servicios
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-foreground/90 max-w-2xl mx-auto drop-shadow-[0_1px_2px_rgba(255,255,255,0.6)]">
             Soluciones integrales para cada etapa de su proyecto de construcción
           </p>
         </div>
@@ -53,19 +53,19 @@ const Services = () => {
           {services.map((service, index) => (
             <Card
               key={index}
-              className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-card border-border animate-fade-in"
+              className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-background/40 backdrop-blur-sm border-white/30 animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardHeader>
-                <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                <div className="w-16 h-16 bg-primary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
                   <service.icon className="w-8 h-8 text-primary group-hover:text-primary-foreground transition-colors" />
                 </div>
-                <CardTitle className="text-xl font-bold text-foreground">
+                <CardTitle className="text-xl font-bold text-foreground drop-shadow-[0_1px_2px_rgba(255,255,255,0.5)]">
                   {service.title}
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-muted-foreground">
+                <CardDescription className="text-foreground/80 drop-shadow-[0_1px_1px_rgba(255,255,255,0.4)]">
                   {service.description}
                 </CardDescription>
               </CardContent>
