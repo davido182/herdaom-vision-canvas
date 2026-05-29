@@ -49,16 +49,4 @@ const Index = () => {
 };
 
 export default Index;
-      <Navigation />
-      <main>
-        <Hero />
-        <Services />
-        <About />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
-  );
-};
 
-export default Index;

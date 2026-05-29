@@ -1,0 +1,13 @@
+# Herdaom - Constructora y Consultora en Loja, Ecuador
+
+> Herdaom Cía. Ltda. es una constructora y consultora en Loja, Ecuador, especializada en construcción de casas, diseño arquitectónico, remodelaciones, hormigones, pisos industriales, impermeabilizaciones y planos estructurales.
+
+## Páginas
+
+- [Inicio](/): Presentación, servicios, sobre nosotros y contacto de Herdaom.
+
+## Contacto
+
+- Dirección: Calle Antón Philips 865-62, Loja, Ecuador
+- Teléfono: +593 98 047 4043
+- Email: herdaom@gmail.com
