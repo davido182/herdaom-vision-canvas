@@ -72,6 +72,16 @@ const Services = () => {
             </Card>
           ))}
         </div>
+
+        <div className="mt-16 text-center max-w-4xl mx-auto animate-fade-in">
+          <p className="text-lg sm:text-xl text-foreground font-medium drop-shadow-[0_1px_2px_rgba(255,255,255,0.6)]">
+            También somos expertos en{" "}
+            <span className="text-primary font-bold">hormigones</span>,{" "}
+            <span className="text-primary font-bold">pisos industriales</span>,{" "}
+            <span className="text-primary font-bold">impermeabilizaciones</span> y{" "}
+            <span className="text-primary font-bold">planos estructurales</span>.
+          </p>
+        </div>
       </div>
     </section>
   );

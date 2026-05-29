@@ -3,13 +3,13 @@ import logo from "@/assets/logoherdaom.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-secondary text-secondary-foreground py-12">
+    <footer className="bg-background text-foreground py-12 border-t border-border">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Logo and Description */}
           <div>
             <img src={logo} alt="Herdaom Logo" className="h-12 w-auto mb-4" />
-            <p className="text-secondary-foreground/80 leading-relaxed">
+            <p className="text-muted-foreground leading-relaxed">
               Construyendo el futuro con excelencia, innovación y compromiso en cada proyecto.
             </p>
           </div>
@@ -21,7 +21,7 @@ const Footer = () => {
               <li>
                 <button
                   onClick={() => document.getElementById("inicio")?.scrollIntoView({ behavior: "smooth" })}
-                  className="text-secondary-foreground/80 hover:text-primary transition-colors"
+                  className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Inicio
                 </button>
@@ -29,7 +29,7 @@ const Footer = () => {
               <li>
                 <button
                   onClick={() => document.getElementById("servicios")?.scrollIntoView({ behavior: "smooth" })}
-                  className="text-secondary-foreground/80 hover:text-primary transition-colors"
+                  className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Servicios
                 </button>
@@ -37,7 +37,7 @@ const Footer = () => {
               <li>
                 <button
                   onClick={() => document.getElementById("nosotros")?.scrollIntoView({ behavior: "smooth" })}
-                  className="text-secondary-foreground/80 hover:text-primary transition-colors"
+                  className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Nosotros
                 </button>
@@ -45,7 +45,7 @@ const Footer = () => {
               <li>
                 <button
                   onClick={() => document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" })}
-                  className="text-secondary-foreground/80 hover:text-primary transition-colors"
+                  className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Contacto
                 </button>
@@ -83,8 +83,8 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="pt-8 border-t border-secondary-foreground/20 text-center">
-          <p className="text-secondary-foreground/80">
+        <div className="pt-8 border-t border-border text-center">
+          <p className="text-muted-foreground">
             © {new Date().getFullYear()} Constructora y Consultora Herdaom Cía. Ltda. Todos los derechos reservados.
           </p>
         </div>
