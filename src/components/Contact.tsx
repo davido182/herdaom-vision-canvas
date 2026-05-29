@@ -87,9 +87,9 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="bg-card border border-border rounded-lg p-6">
-              <h4 className="font-semibold text-foreground mb-3">Horario de Atención</h4>
-              <div className="space-y-2 text-muted-foreground">
+            <div className="bg-background/40 backdrop-blur-sm border border-white/30 rounded-lg p-6">
+              <h4 className="font-semibold text-foreground mb-3 drop-shadow-[0_1px_2px_rgba(255,255,255,0.5)]">Horario de Atención</h4>
+              <div className="space-y-2 text-foreground/80 drop-shadow-[0_1px_1px_rgba(255,255,255,0.4)]">
                 <p>Lunes - Viernes: 8:00 AM - 6:00 PM</p>
                 <p>Sábados: 9:00 AM - 1:00 PM</p>
               </div>
