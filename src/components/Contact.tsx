@@ -10,14 +10,14 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    phone: "",
+    phone: "+593 ",
     message: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast.success("¡Mensaje enviado! Nos pondremos en contacto pronto.");
-    setFormData({ name: "", email: "", phone: "", message: "" });
+    setFormData({ name: "", email: "", phone: "+593 ", message: "" });
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -71,7 +71,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Teléfono</h4>
-                    <p className="text-muted-foreground">+593 (2) 123-4567</p>
+                    <p className="text-muted-foreground">+593 98 047 4043</p>
                   </div>
                 </div>
                 
@@ -81,7 +81,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Ubicación</h4>
-                    <p className="text-muted-foreground">Quito, Ecuador</p>
+                    <p className="text-muted-foreground">Calle Antón Philips 865-62, Loja, Ecuador</p>
                   </div>
                 </div>
               </div>
@@ -92,7 +92,6 @@ const Contact = () => {
               <div className="space-y-2 text-muted-foreground">
                 <p>Lunes - Viernes: 8:00 AM - 6:00 PM</p>
                 <p>Sábados: 9:00 AM - 1:00 PM</p>
-                <p>Domingos: Cerrado</p>
               </div>
             </div>
           </div>
@@ -143,7 +142,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   className="bg-background border-input"
-                  placeholder="+593 999 999 999"
+                  placeholder="+593 98 047 4043"
                 />
               </div>
 

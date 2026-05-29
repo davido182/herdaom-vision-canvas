@@ -1,5 +1,5 @@
 import { Facebook, Instagram, Linkedin } from "lucide-react";
-import logo from "@/assets/logoherdaom.jpg";
+import logo from "@/assets/logoherdaom.png";
 
 const Footer = () => {
   return (
