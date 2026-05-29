@@ -66,20 +66,33 @@ const About = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-6">
-            {values.map((value, index) => (
-              <div
-                key={index}
-                className="bg-card border border-border rounded-lg p-6 hover:border-primary transition-all duration-300 hover:shadow-lg animate-slide-up"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                  <value.icon className="w-6 h-6 text-primary" />
+          <div className="grid grid-cols-3 grid-rows-3 gap-4 max-w-md mx-auto w-full aspect-square">
+            {values.map((value, index) => {
+              // Cross layout: top, left, right, bottom
+              const positions = [
+                "col-start-2 row-start-1", // top
+                "col-start-1 row-start-2", // left
+                "col-start-3 row-start-2", // right
+                "col-start-2 row-start-3", // bottom
+              ];
+              return (
+                <div
+                  key={index}
+                  className={`${positions[index]} group bg-transparent border border-primary/30 rounded-lg p-4 flex flex-col items-center justify-center text-center transition-transform duration-300 hover:scale-105 animate-slide-up`}
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mb-2 transition-transform duration-300 group-hover:scale-110">
+                    <value.icon className="w-5 h-5 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-foreground mb-1 text-sm transition-transform duration-300 group-hover:scale-110">
+                    {value.title}
+                  </h3>
+                  <p className="text-xs text-muted-foreground transition-transform duration-300 group-hover:scale-105">
+                    {value.description}
+                  </p>
                 </div>
-                <h3 className="font-semibold text-foreground mb-2">{value.title}</h3>
-                <p className="text-sm text-muted-foreground">{value.description}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>
