@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import About from "@/components/About";
+import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -13,7 +14,7 @@ const schemaData = {
   "alternateName": "Herdaom",
   "description": "Empresa constructora y consultora en Loja, Ecuador. Especializada en construcción de casas, diseño arquitectónico, gerencia de proyectos, consultoría técnica, hormigones, pisos industriales, impermeabilizaciones y planos estructurales.",
   "url": "https://www.herdaom.com",
-  "telephone": "+593980474043",
+  "telephone": ["+593980474043", "+593959213019"],
   "email": "herdaom@gmail.com",
   "image": "https://www.herdaom.com/og-image.jpg",
   "logo": "https://www.herdaom.com/favicon.svg",
@@ -95,6 +96,7 @@ const Index = () => {
           <Hero />
           <Services />
           <About />
+          <Projects />
           <Contact />
         </main>
         <Footer />

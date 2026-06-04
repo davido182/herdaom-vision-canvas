@@ -47,6 +47,12 @@ const Navigation = () => {
             >
               Nosotros
             </button>
+            <button
+              onClick={() => scrollToSection("proyectos")}
+              className="text-foreground hover:text-primary transition-colors font-medium"
+            >
+              Proyectos
+            </button>
             <Button
               onClick={() => scrollToSection("contacto")}
               className="bg-primary hover:bg-accent text-primary-foreground font-semibold"
@@ -86,6 +92,12 @@ const Navigation = () => {
               className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
             >
               Nosotros
+            </button>
+            <button
+              onClick={() => scrollToSection("proyectos")}
+              className="block w-full text-left text-foreground hover:text-primary transition-colors font-medium py-2"
+            >
+              Proyectos
             </button>
             <Button
               onClick={() => scrollToSection("contacto")}
