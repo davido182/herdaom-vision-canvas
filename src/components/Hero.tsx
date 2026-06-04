@@ -26,11 +26,11 @@ const Hero = () => {
           <h1 className="font-montserrat text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
             Construyendo el Futuro
             <span className="text-primary block mt-2">
-              <span className="text-foreground/70">Juntos</span>
+              <span className="text-foreground/70">en Loja, Ecuador</span>
             </span>
           </h1>
           <p className="text-xl sm:text-2xl text-muted-foreground mb-8 leading-relaxed">
-            Expertos en construcción y consultoría. Transformamos sus proyectos en realidad con experiencia, innovación y compromiso.
+            Constructora y consultora líder en Loja. Transformamos sus proyectos de construcción en realidad con más de 15 años de experiencia, innovación y compromiso.
           </p>
         </div>
       </div>

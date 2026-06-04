@@ -45,10 +45,10 @@ const About = () => {
               Sobre <span className="text-primary">Herdaom</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Somos una empresa líder en construcción y consultoría, dedicada a transformar visiones en estructuras reales. Con años de experiencia en el sector, nos especializamos en proyectos que combinan funcionalidad, estética y sostenibilidad.
+              Somos una empresa constructora y consultora líder en Loja, Ecuador, dedicada a transformar visiones en estructuras reales. Con más de 15 años de experiencia en el sector, nos especializamos en proyectos que combinan funcionalidad, estética y sostenibilidad.
             </p>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Nuestro compromiso es entregar proyectos que superen las expectativas, manteniendo los más altos estándares de calidad y cumplimiento de plazos.
+              Desde Loja atendemos proyectos en todo Ecuador. Nuestro compromiso es entregar obras que superen las expectativas, manteniendo los más altos estándares de calidad y cumplimiento de plazos.
             </p>
             <div className="flex flex-wrap gap-8">
               <div>

@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://herdaom-vision-canvas.lovable.app/sitemap.xml
+Sitemap: https://www.herdaom.com/sitemap.xml

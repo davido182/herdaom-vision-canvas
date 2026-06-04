@@ -1,26 +1,59 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Loader2 } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
+import { supabase } from "@/lib/supabase";
 import constructionBg from "@/assets/construction-bg.jpg";
 
-const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "+593 ",
-    message: "",
-  });
+interface FormData {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+}
 
-  const handleSubmit = (e: React.FormEvent) => {
+const emptyForm: FormData = {
+  name: "",
+  email: "",
+  phone: "+593 ",
+  message: "",
+};
+
+const Contact = () => {
+  const [formData, setFormData] = useState<FormData>(emptyForm);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("¡Mensaje enviado! Nos pondremos en contacto pronto.");
-    setFormData({ name: "", email: "", phone: "+593 ", message: "" });
+    setIsLoading(true);
+
+    try {
+      const { error } = await supabase.from("leads").insert([
+        {
+          nombre: formData.name.trim(),
+          email: formData.email.trim().toLowerCase(),
+          telefono: formData.phone.trim(),
+          mensaje: formData.message.trim(),
+        },
+      ]);
+
+      if (error) throw error;
+
+      toast.success("¡Mensaje enviado! Nos pondremos en contacto pronto.");
+      setFormData(emptyForm);
+    } catch (err) {
+      console.error("Error al guardar el lead:", err);
+      toast.error("Hubo un problema al enviar su mensaje. Por favor intente de nuevo.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -36,7 +69,7 @@ const Contact = () => {
       }}
     >
       <div className="absolute inset-0 bg-background/95"></div>
-      
+
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="font-montserrat text-4xl sm:text-5xl font-bold text-foreground mb-4">
@@ -64,7 +97,7 @@ const Contact = () => {
                     <p className="text-muted-foreground">herdaom@gmail.com</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Phone className="w-6 h-6 text-primary" />
@@ -74,21 +107,25 @@ const Contact = () => {
                     <p className="text-muted-foreground">+593 98 047 4043</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-6 h-6 text-primary" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Ubicación</h4>
-                    <p className="text-muted-foreground">Calle Antón Philips 865-62, Loja, Ecuador</p>
+                    <p className="text-muted-foreground">
+                      Calle Antón Philips 865-62, Loja, Ecuador
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="bg-background/40 backdrop-blur-sm border border-white/30 rounded-lg p-6">
-              <h4 className="font-semibold text-foreground mb-3 drop-shadow-[0_1px_2px_rgba(255,255,255,0.5)]">Horario de Atención</h4>
+              <h4 className="font-semibold text-foreground mb-3 drop-shadow-[0_1px_2px_rgba(255,255,255,0.5)]">
+                Horario de Atención
+              </h4>
               <div className="space-y-2 text-foreground/80 drop-shadow-[0_1px_1px_rgba(255,255,255,0.4)]">
                 <p>Lunes - Viernes: 8:00 AM - 6:00 PM</p>
                 <p>Sábados: 9:00 AM - 1:00 PM</p>
@@ -100,7 +137,10 @@ const Contact = () => {
           <div className="bg-card border border-border rounded-lg p-8 animate-fade-in">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-foreground mb-2"
+                >
                   Nombre Completo
                 </label>
                 <Input
@@ -109,13 +149,17 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
+                  disabled={isLoading}
                   className="bg-background border-input"
                   placeholder="Juan Pérez"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-foreground mb-2"
+                >
                   Email
                 </label>
                 <Input
@@ -125,13 +169,17 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
+                  disabled={isLoading}
                   className="bg-background border-input"
                   placeholder="juan@ejemplo.com"
                 />
               </div>
 
               <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
+                <label
+                  htmlFor="phone"
+                  className="block text-sm font-medium text-foreground mb-2"
+                >
                   Teléfono
                 </label>
                 <Input
@@ -141,13 +189,17 @@ const Contact = () => {
                   value={formData.phone}
                   onChange={handleChange}
                   required
+                  disabled={isLoading}
                   className="bg-background border-input"
                   placeholder="+593 98 047 4043"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-foreground mb-2"
+                >
                   Mensaje
                 </label>
                 <Textarea
@@ -156,6 +208,7 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleChange}
                   required
+                  disabled={isLoading}
                   rows={5}
                   className="bg-background border-input resize-none"
                   placeholder="Cuéntenos sobre su proyecto..."
@@ -164,9 +217,17 @@ const Contact = () => {
 
               <Button
                 type="submit"
+                disabled={isLoading}
                 className="w-full bg-primary hover:bg-accent text-primary-foreground font-semibold py-6"
               >
-                Enviar Mensaje
+                {isLoading ? (
+                  <>
+                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                    Enviando...
+                  </>
+                ) : (
+                  "Enviar Mensaje"
+                )}
               </Button>
             </form>
           </div>

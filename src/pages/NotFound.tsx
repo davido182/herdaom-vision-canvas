@@ -15,9 +15,9 @@ const NotFound = () => {
         <title>Página no encontrada | Herdaom</title>
         <meta name="description" content="La página que buscas no existe. Vuelve al inicio de Herdaom Constructora en Loja, Ecuador." />
         <meta name="robots" content="noindex, follow" />
-        <link rel="canonical" href="https://herdaom-vision-canvas.lovable.app/404" />
+        <link rel="canonical" href="https://www.herdaom.com/404" />
         <meta property="og:title" content="Página no encontrada | Herdaom" />
-        <meta property="og:url" content="https://herdaom-vision-canvas.lovable.app/404" />
+        <meta property="og:url" content="https://www.herdaom.com/404" />
       </Helmet>
       <div className="flex min-h-screen items-center justify-center bg-background">
         <div className="text-center">
