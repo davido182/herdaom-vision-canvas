@@ -40,7 +40,6 @@ const About = () => {
               <div><div className="text-2xl font-bold text-primary mb-1">Todo Ecuador</div><div className="text-muted-foreground">Base en Loja</div></div>
             </div>
           </div>
-          </div>
 
           <div className="grid grid-cols-3 grid-rows-3 gap-4 max-w-md mx-auto w-full aspect-square">
             {values.map((value, index) => {
