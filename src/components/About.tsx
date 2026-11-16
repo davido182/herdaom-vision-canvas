@@ -2,9 +2,9 @@ import { HardHat, Calculator, PenTool, ShieldCheck } from "lucide-react";
 import constructionBg from "@/assets/construction-bg.jpg";
 
 const values = [
-  { icon: HardHat, title: "Ingeniero Civil", description: "Cálculo estructural y dirección de obra en campo" },
-  { icon: Calculator, title: "Economista", description: "Presupuestos reales y control de cada dólar" },
-  { icon: PenTool, title: "Arquitecto", description: "Diseño funcional y planos para permisos" },
+  { icon: HardHat, title: "Obra civil", description: "Cálculo estructural y dirección de obra en campo" },
+  { icon: Calculator, title: "Presupuestos", description: "Estimación y revisión de costos de obra" },
+  { icon: PenTool, title: "Diseño", description: "Diseño funcional y planos para permisos" },
   { icon: ShieldCheck, title: "Norma NEC", description: "Diseño sismorresistente verificable" },
 ];
 
