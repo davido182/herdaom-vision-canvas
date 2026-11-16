@@ -1,27 +1,11 @@
-import { Award, Users, Target, TrendingUp } from "lucide-react";
+import { HardHat, Calculator, PenTool, ShieldCheck } from "lucide-react";
 import constructionBg from "@/assets/construction-bg.jpg";
 
 const values = [
-  {
-    icon: Award,
-    title: "Calidad",
-    description: "Excelencia en cada proyecto que realizamos",
-  },
-  {
-    icon: Users,
-    title: "Equipo Profesional",
-    description: "Especialistas comprometidos con su éxito",
-  },
-  {
-    icon: Target,
-    title: "Precisión",
-    description: "Atención al detalle en cada etapa",
-  },
-  {
-    icon: TrendingUp,
-    title: "Innovación",
-    description: "Soluciones modernas y eficientes",
-  },
+  { icon: HardHat, title: "Ingeniero Civil", description: "Cálculo estructural y dirección de obra en campo" },
+  { icon: Calculator, title: "Economista", description: "Presupuestos reales y control de cada dólar" },
+  { icon: PenTool, title: "Arquitecto", description: "Diseño funcional y planos para permisos" },
+  { icon: ShieldCheck, title: "Norma NEC", description: "Diseño sismorresistente verificable" },
 ];
 
 const About = () => {
@@ -45,24 +29,15 @@ const About = () => {
               Sobre <span className="text-primary">Herdaom</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Somos una empresa constructora y consultora líder en Loja, Ecuador, dedicada a transformar visiones en estructuras reales. Con más de 15 años de experiencia en el sector, nos especializamos en proyectos que combinan funcionalidad, estética y sostenibilidad.
+              <strong className="text-foreground">HERDAOM</strong> viene de <strong className="text-foreground">HER</strong>manos <strong className="text-foreground">Da</strong>niel David, Damián y Alex <strong className="text-foreground">O</strong>choa <strong className="text-foreground">M</strong>árquez. Somos una familia de técnicos: la experiencia en cálculo y obra de nuestro padre, ingeniero civil; el control de costos de un economista; y el diseño de un arquitecto.
             </p>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Desde Loja atendemos proyectos en todo Ecuador. Nuestro compromiso es entregar obras que superen las expectativas, manteniendo los más altos estándares de calidad y cumplimiento de plazos.
+              No jugamos con el patrimonio de las familias: cada metro cuadrado se calcula con norma NEC y cada dólar se revisa en planilla abierta. Desde Loja atendemos proyectos en todo Ecuador.
             </p>
             <div className="flex flex-wrap gap-8">
-              <div>
-                <div className="text-4xl font-bold text-primary mb-1">500+</div>
-                <div className="text-muted-foreground">Proyectos Completados</div>
-              </div>
-              <div>
-                <div className="text-4xl font-bold text-primary mb-1">15+</div>
-                <div className="text-muted-foreground">Años de Experiencia</div>
-              </div>
-              <div>
-                <div className="text-4xl font-bold text-primary mb-1">100%</div>
-                <div className="text-muted-foreground">Satisfacción del Cliente</div>
-              </div>
+              <div><div className="text-2xl font-bold text-primary mb-1">Norma NEC</div><div className="text-muted-foreground">Cálculo sismorresistente</div></div>
+              <div><div className="text-2xl font-bold text-primary mb-1">Planilla abierta</div><div className="text-muted-foreground">Costos transparentes</div></div>
+              <div><div className="text-2xl font-bold text-primary mb-1">Todo Ecuador</div><div className="text-muted-foreground">Base en Loja</div></div>
             </div>
           </div>
 
