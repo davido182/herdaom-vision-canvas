@@ -2,9 +2,9 @@ import { HardHat, Calculator, PenTool, ShieldCheck } from "lucide-react";
 import constructionBg from "@/assets/construction-bg.jpg";
 
 const values = [
-  { icon: HardHat, title: "Ingeniero Civil", description: "Cálculo estructural y dirección de obra en campo" },
-  { icon: Calculator, title: "Economista", description: "Presupuestos reales y control de cada dólar" },
-  { icon: PenTool, title: "Arquitecto", description: "Diseño funcional y planos para permisos" },
+  { icon: HardHat, title: "Obra civil", description: "Cálculo estructural y dirección de obra en campo" },
+  { icon: Calculator, title: "Presupuestos", description: "Estimación y revisión de costos de obra" },
+  { icon: PenTool, title: "Diseño", description: "Diseño funcional y planos para permisos" },
   { icon: ShieldCheck, title: "Norma NEC", description: "Diseño sismorresistente verificable" },
 ];
 
@@ -29,7 +29,7 @@ const About = () => {
               Sobre <span className="text-primary">Herdaom</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              <strong className="text-foreground">HERDAOM</strong> viene de <strong className="text-foreground">HER</strong>manos <strong className="text-foreground">Da</strong>niel David, Damián y Alex <strong className="text-foreground">O</strong>choa <strong className="text-foreground">M</strong>árquez. Somos una familia de técnicos: la experiencia en cálculo y obra de nuestro padre, ingeniero civil; el control de costos de un economista; y el diseño de un arquitecto.
+              En Herdaom ofrecemos construcción y consultoría para viviendas y obras civiles. Nuestra base está en Loja; evaluamos proyectos en otras ciudades de Ecuador según su alcance.
             </p>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
               No jugamos con el patrimonio de las familias: cada metro cuadrado se calcula con norma NEC y cada dólar se revisa en planilla abierta. Desde Loja atendemos proyectos en todo Ecuador.
