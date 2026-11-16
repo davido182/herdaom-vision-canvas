@@ -27,7 +27,7 @@ const Hero = () => {
             <span className="block mt-2 text-foreground/70">sin sobrecostos ocultos</span>
           </h1>
           <p className="text-xl sm:text-2xl text-muted-foreground mb-8 leading-relaxed">
-            Constructora familiar en Loja: un ingeniero civil, un economista y un arquitecto. Calculamos cada estructura bajo norma NEC y cada dólar en planilla abierta. Trabajamos en todo Ecuador.
+            Construcción y consultoría en Loja y otras ciudades de Ecuador. Cuéntanos qué necesitas construir, revisar o mejorar y conversemos sobre tu proyecto.
           </p>
           <a
             href="https://wa.me/593980474043?text=Hola%20Herdaom%2C%20quisiera%20una%20consulta%20t%C3%A9cnica"
