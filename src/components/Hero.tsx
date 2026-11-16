@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import constructionBg from "@/assets/construction-bg.jpg";
 
@@ -24,14 +23,20 @@ const Hero = () => {
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 py-32">
         <div className="max-w-3xl animate-fade-in">
           <h1 className="font-montserrat text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
-            Construyendo el Futuro
-            <span className="text-primary block mt-2">
-              <span className="text-foreground/70">en Loja, Ecuador</span>
-            </span>
+            Ingeniería y control de costos
+            <span className="block mt-2 text-foreground/70">sin sobrecostos ocultos</span>
           </h1>
           <p className="text-xl sm:text-2xl text-muted-foreground mb-8 leading-relaxed">
-            Constructora y consultora líder en Loja. Transformamos sus proyectos de construcción en realidad con más de 15 años de experiencia, innovación y compromiso.
+            Constructora familiar en Loja: un ingeniero civil, un economista y un arquitecto. Calculamos cada estructura bajo norma NEC y cada dólar en planilla abierta. Trabajamos en todo Ecuador.
           </p>
+          <a
+            href="https://wa.me/593980474043?text=Hola%20Herdaom%2C%20quisiera%20una%20consulta%20t%C3%A9cnica"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3 text-lg font-semibold text-primary-foreground transition-transform hover:scale-105"
+          >
+            Consulta por WhatsApp <ArrowRight className="w-5 h-5" />
+          </a>
         </div>
       </div>
 

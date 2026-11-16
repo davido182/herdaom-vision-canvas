@@ -1,28 +1,12 @@
-import { Building2, Pencil, HardHat, ClipboardCheck } from "lucide-react";
+import { Building2, Search, Calculator, ClipboardCheck } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import constructionBg from "@/assets/construction-bg.jpg";
 
 const services = [
-  {
-    icon: Building2,
-    title: "Construcción",
-    description: "Proyectos de construcción completos desde la planificación hasta la entrega final.",
-  },
-  {
-    icon: Pencil,
-    title: "Diseño Arquitectónico",
-    description: "Diseños innovadores y funcionales adaptados a sus necesidades específicas.",
-  },
-  {
-    icon: HardHat,
-    title: "Gerencia de Proyectos",
-    description: "Gestión profesional para garantizar el éxito de su proyecto en tiempo y forma.",
-  },
-  {
-    icon: ClipboardCheck,
-    title: "Consultoría Técnica",
-    description: "Asesoramiento especializado en todas las fases de su proyecto constructivo.",
-  },
+  { icon: Search, title: "Peritaje de Fisuras y Humedades", description: "Inspección técnica con informe escrito en 24 a 48 horas. Ideal antes de comprar una casa." },
+  { icon: Calculator, title: "Auditoría de Presupuestos", description: "Revisamos el presupuesto que le dieron, rubro por rubro, para evitar sobrecostos." },
+  { icon: ClipboardCheck, title: "Cálculo Estructural y Planos", description: "Planos y cálculo bajo norma NEC listos para aprobación municipal." },
+  { icon: Building2, title: "Fiscalización y Construcción", description: "Supervisamos su obra o la construimos completa, con reportes de avance y costos." },
 ];
 
 const Services = () => {
